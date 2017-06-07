@@ -1,0 +1,19 @@
+section {
+    background-color: #ffeeff;
+}
+
+section span {
+    display: inline-block;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 3vw;
+    right: 3vw;
+    background-image: url('https://www.gnu.org/software/emacs/images/emacs.png');
+    background-size: cover;
+    width: 20vw;
+    height: 20vw;
+    opacity: 0.5;
+}
