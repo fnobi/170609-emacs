@@ -16,7 +16,25 @@ section:before {
     width: 20vw;
     height: 20vw;
     opacity: 0.5;
-}</style></head><body><main></article><section><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1></section></main><script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+}
+
+article strong {
+    font-weight: bold;
+}
+
+article code {
+    background-color: #eee;
+}
+
+blockquote {
+    opacity: 0.5;
+    border-left: solid 0.3vw;
+    padding-left: 1.2vw;
+}
+
+a {
+    color: inherit;
+}</style></head><body><main></article><section><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1></section><section><h2>Emacsって？</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>Emacsって？</h2></header><blockquote><p>the extensible, customizable, self-documenting, real-time display editor</p></blockquote><ul><li><p>オープンソース。1970年ごろから開発が始まる。</p></li><li><p>Emacs.appも、ターミナル上で起動するタイプもあるよ</p></li><li><p>Vimと比較対象に挙がることが多い</p><ul><li><strong>Vimmerより偏屈な人が多い ※所感</strong></li></ul></li></ul></article><section><h2>キーバインド</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>キーバインド</h2></header><ul><li><code>control + なにか</code> を主体としたキーバインド<ul><li>とにかく左手小指を伸ばしましょう</li></ul></li><li>いくつかのキーバインドは、Macのテキストフィールド等々でも使用可能なので、覚えておくとMacでのテキスト作成全般がスピードアップします</li></ul></article><section><h2>elisp</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>elisp</h2></header><ul><li>Emacsの全ては <strong>lisp</strong> で書かれており、エディタを拡張したい場合・プラグインを使いたい場合はlispを使うことになる<ul><li>lisp: カッコでくくったリストで全ての処理を記述する非常に原理主義的な言語</li><li>lispは使う処理系によっていろいろと「方言」があり、Emacsで使われるものはelispと呼ばれる</li></ul></li></ul></article><section><h2>よく使われるプラグイン</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>よく使われるプラグイン</h2></header><ul><li><p><a href="https://github.com/auto-complete/auto-complete">auto-complete</a></p><ul><li><p>補完（言語ごとにカスタマイズ等可能）</p></li></ul></li><li><p><a href="https://www.emacswiki.org/emacs/Anything">anything</a> / <a href="https://github.com/emacs-helm/helm">helm</a></p><ul><li><p>対象とするファイルをインクリメンタルサーチして、一括で同じ処理をかける</p></li></ul></li><li><p><a href="https://github.com/joaotavora/yasnippet">yasnippet</a></p><ul><li><p>スニペットを管理する</p></li></ul></li><li><p><a href="https://github.com/magit/magit">magit</a></p><ul><li>gitクライアント</li></ul></li></ul></main><script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
