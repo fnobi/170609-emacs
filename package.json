@@ -1,0 +1,12 @@
+{
+  "name": "170609_emacs",
+  "version": "1.0.0",
+  "author": "fujisawa-shin <fujisawa-shin@kayac.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "sector-slide --server README.md"
+  },
+  "devDependencies": {
+    "sector-slide": "^1.2.0"
+  }
+}
