@@ -2,7 +2,13 @@
     background-color: #ffeeff;
 }
 
-section span {
+section h1 {
+    width: 90%;
+    left: 5%;
+}
+
+section span,
+article span {
     display: inline-block;
 }
 
@@ -40,20 +46,7 @@ img {
     display: block;
     margin: auto;
     width: 80%;
-}</style></head><body><main></article><section><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1></section><section><h2>Emacsって？</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>Emacsって？</h2></header><blockquote><p>the extensible, customizable, self-documenting, real-time display editor</p></blockquote><ul><li><p>オープンソース。1970年ごろから開発が始まる。</p></li><li><p>Emacs.appも、ターミナル上で起動するタイプもあるよ</p></li><li><p>Vimと比較対象に挙がることが多い</p><ul><li><strong>Vimmerより偏屈な人が多い ※所感</strong></li></ul></li></ul></article><section><h2>宗教戦争？</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>宗教戦争？</h2></header><p><a href="http://dev.ariel-networks.com/wp/archives/1280">http://dev.ariel-networks.com/wp/archives/1280</a></p><p><img alt="yurushi" src="/slide/yurushi.png"></img></p></article><section><h2>キーバインド</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>キーバインド</h2></header><ul><li><code>control + なにか</code> を主体としたキーバインド<ul><li>とにかく左手小指を伸ばしましょう</li></ul></li><li>いくつかのキーバインドは、Macのテキストフィールド等々でも使用可能なので、覚えておくとMacでのテキスト作成全般がスピードアップします</li></ul></article><section><h2>elisp</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>elisp</h2></header><ul><li>Emacsの全ては <strong>lisp</strong> で書かれており、エディタを拡張したい場合・プラグインを使いたい場合はlispを使うことになる<ul><li>lisp: カッコでくくったリストで全ての処理を記述する非常に原理主義的な言語<ul><li><strong>神の言語</strong></li></ul></li><li>lispは使う処理系によっていろいろと「方言」があり、Emacsで使われるものはelispと呼ばれる</li></ul></li></ul></article><section><h3>sample</h3></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>elisp</h2><h3>sample</h3></header><p><pre><code>(defun write-rough ()
-  "現在のbufferをいいかんじのファイル名で保存します"
-  (interactive)
-  (setq rough (rough-file-name 0))
-  (write-file rough)
-  (message (format "write to %s" rough)))
-</code></pre></p><p><pre><code>(defun rough-file-name (index)
-  (setq dir (expand-file-name "~/Documents/rough"))
-  (setq today (shell-command-to-string "echo -n $(date +%y%m%d)"))
-  (setq filename (if (> index 0)
-                   (format "%s/%s<em>rough-%d.md" dir today index)
-                   (format "%s/%s</em>rough.md" dir today)))
-  (if (file-exists-p filename) (rough-file-name (+ index 1)) filename))
-</code></pre></p></article><section><h2>よく使われるプラグイン</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>よく使われるプラグイン</h2></header><ul><li><p><a href="https://github.com/auto-complete/auto-complete">auto-complete</a></p><ul><li><p>補完（言語ごとにカスタマイズ等可能）</p></li></ul></li><li><p><a href="https://www.emacswiki.org/emacs/Anything">anything</a> / <a href="https://github.com/emacs-helm/helm">helm</a></p><ul><li><p>対象とするファイルをインクリメンタルサーチして、一括で同じ処理をかける</p></li></ul></li><li><p><a href="https://github.com/joaotavora/yasnippet">yasnippet</a></p><ul><li>スニペットを管理する</li></ul></li></ul></article><section><h2>最近の悩み</h2></section><article><header><h1><span>Emacs布教資料</span><span>（基礎編）</span></h1><h2>最近の悩み</h2></header><ul><li>パッケージマネージャーがいまいち安定しない</li><li><p>開発が止まらないか心配</p></li><li><p><a href="https://github.com/syl20bnr/spacemacs">Spaceemacs</a> とかいうやつは基本vimです</p><ul><li><a href="http://tarao.hatenablog.com/entry/20130303/evil_intro">Evil: EmacsをVimのごとく使う - 導入編 - 貳佰伍拾陸夜日記</a></li></ul></li></ul></main><script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+}</style></head><body><main></article><section><h1><span>開発環境のハナシ</span><span>　〜のびー編〜　</span></h1></section><article><header><h1><span>開発環境のハナシ</span><span>　〜のびー編〜　</span></h1></header><ul><li>別資料：<a href="../slide/">emacs布教資料（基礎編）</a></li></ul></article><section><h2>普段書いてるもの</h2></section><article><header><h1><span>開発環境のハナシ</span><span>　〜のびー編〜　</span></h1><h2>普段書いてるもの</h2></header><ul><li>受託チーム・Web Frontend<ul><li>ES2015 / SCSS / HTML(PUG) / Ruby (Rails)</li></ul></li><li>なんか最近、死ぬほどマークダウン書いてる</li></ul></article><section><h2><span>まずは延々と</span><span>使ってるものを書く</span></h2></section><article><header><h1><span>開発環境のハナシ</span><span>　〜のびー編〜　</span></h1><h2><span>まずは延々と</span><span>使ってるものを書く</span></h2></header><ul><li><p>shell: <strong>bash / Terminal</strong></p><ul><li>1案件 1window</li><li><p>案件がおおいので並列で開きたい</p></li></ul></li><li><p>エディタ: <strong>emacs</strong></p><ul><li>かなり重症</li><li>anything・yasnippet (後述) / magitをとてもとても推したい</li></ul></li></ul></article><section><h2>使ってないものを書く</h2></section><article><header><h1><span>開発環境のハナシ</span><span>　〜のびー編〜　</span></h1><h2>使ってないものを書く</h2></header><ul><li><p>Alfred</p><ul><li><p>全アプリケーションでキーバインドを奪っていくのが嫌だ</p></li></ul></li><li><p>外部ディスプレイ</p><ul><li>視点が動くのがだるい</li></ul></li></ul></article><section><h2>こだわってるところ</h2></section><article><header><h1><span>開発環境のハナシ</span><span>　〜のびー編〜　</span></h1><h2>こだわってるところ</h2></header><ul><li><p><strong><a href="https://github.com/fnobi/cleane/tree/master/snippets/js2-mode">snippet</a></strong></p></li><li><p><strong>インクリメンタルサーチ</strong></p><ul><li>基本はemacsのanything.el</li><li>ないものはつくる<ul><li><a href="https://github.com/fnobi/cleane/blob/master/lib/anything-open-app.el">アプリケーションをインクリメンタルサーチする</a>とか</li><li><a href="https://chrome.google.com/webstore/detail/bookmark-first/bmabncncokkifiolkiojbbeaoamdffek?hl=ja">ブックマークをインクリメンタルサーチする</a>とか</li></ul></li></ul></li></ul></main><script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a

@@ -4,7 +4,8 @@
   "author": "fujisawa-shin <fujisawa-shin@kayac.com>",
   "license": "MIT",
   "scripts": {
-    "start": "sector-slide --server README.md"
+    "start": "sector-slide --server README.md",
+    "start-profile": "sector-slide -n slide2 --server profile.md"
   },
   "devDependencies": {
     "sector-slide": "^1.2.0"

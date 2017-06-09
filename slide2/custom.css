@@ -2,7 +2,13 @@ section {
     background-color: #ffeeff;
 }
 
-section span {
+section h1 {
+    width: 90%;
+    left: 5%;
+}
+
+section span,
+article span {
     display: inline-block;
 }
 
